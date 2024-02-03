@@ -23,17 +23,29 @@ class _DownloadsPageState extends State<DownloadsPage> {
                 height: 1.5,
                 thickness: 2.5,
               )),
-          backgroundColor: Style.bg_color,
-          title: const Text('Downloaded Books')),
+          backgroundColor: Style.primary,
+          iconTheme: const IconThemeData(color: Colors.white),
+          title: const Text(
+            'Downloaded Books',
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+          )),
       body: Padding(
         padding: const EdgeInsets.only(top: 7),
         child: ListView.builder(
           itemBuilder: (context, index) {
             return Container(
-              padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 2),
               margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 7),
               decoration: const BoxDecoration(
-                  color: Style.secondary,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black38,
+                      offset: Offset(1, 2), // Shadow position (x, y)
+                      blurRadius: 1.0, // Spread of the shadow
+                      spreadRadius: 1.0, // Offset of the shadow
+                    ),
+                  ],
+                  color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(8))),
               child: ListTile(
                 leading: Image.asset(
@@ -46,14 +58,8 @@ class _DownloadsPageState extends State<DownloadsPage> {
                   size: 30,
                   color: Style.primary,
                 ),
-                title: const Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Books Auther'),
-                    Text('Books Auther'),
-                  ],
-                ),
+                title: const Text('Books Name'),
+                subtitle: const Text('Auther Name'),
                 // Add other widgets or customization as needed
               ),
             );
