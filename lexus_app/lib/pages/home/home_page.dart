@@ -102,7 +102,7 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ],
                         shape: BoxShape.rectangle,
-                        color: Colors.white),
+                        color: Style.secondary),
                     child: Column(children: [
                       Padding(
                         padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
