@@ -119,14 +119,14 @@ class _HomeViewState extends State<HomeView> {
                                           const ProfilePage()),
                                 );
                               },
-                              child: const Padding(
-                                padding: EdgeInsets.only(left: 0, top: 2),
+                              child:  Padding(
+                                padding: const EdgeInsets.only(left: 0, top: 2),
                                 child: CircleAvatar(
                                   radius: 22,
-                                  backgroundImage: NetworkImage(
+                                  backgroundImage: const NetworkImage(
                                     'https://images.unsplash.com/photo-1547721064-da6cfb341d50',
                                   ),
-                                  backgroundColor: Colors.amber,
+                                  backgroundColor: Colors.grey[300],
                                 ),
                               ),
                             ),

@@ -90,11 +90,11 @@ class AppTextField extends StatelessWidget {
   final Color? hintColor;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      constraints: BoxConstraints(
-          maxWidth: maxwidth ?? 500, maxHeight: boxheight ?? double.infinity),
-      child: GestureDetector(
-        onTap: onTap,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        constraints: BoxConstraints(
+            maxWidth: maxwidth ?? 500, maxHeight: boxheight ?? double.infinity),
         child: TextFormField(
           minLines: minLine,
           enabled: enabled,
