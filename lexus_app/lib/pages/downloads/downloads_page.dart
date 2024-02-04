@@ -13,7 +13,7 @@ class _DownloadsPageState extends State<DownloadsPage> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Style.secondary,
+      backgroundColor: Style.bg_color,
       appBar: AppBar(
           elevation: 0,
           bottom: const PreferredSize(
